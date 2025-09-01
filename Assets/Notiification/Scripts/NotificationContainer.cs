@@ -8,9 +8,9 @@ namespace NotificationSystem
     public class NotificationContainer : MonoBehaviour
     {
         [field:SerializeField] public NotificationPosition ContainerPosition { get; private set; }
-
+        [field: SerializeField] public RectTransform ContainerRect { get; private set; }
+        
         [SerializeField] int maxPopups = 8;
-        [SerializeField] RectTransform ContainerRect;
 
         private List<NotificationPopup> activePopups = new List<NotificationPopup>();
 
@@ -34,8 +34,8 @@ namespace NotificationSystem
 
             popup.container = this;
             popup.transform.SetParent(ContainerRect);
+            //popup.transform.localScale = Vector3.one;
             // fix para glitches visuais devido ao layout complexo
-            popup.transform.localScale = Vector3.one;
             if(popup.TryGetComponent(out RectTransform tr))
                 LayoutRebuilder.ForceRebuildLayoutImmediate(tr);
         }

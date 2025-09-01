@@ -3522,8 +3522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContainerPosition>k__BackingField: 1
+  <ContainerRect>k__BackingField: {fileID: 1028821386}
   maxPopups: 8
-  ContainerRect: {fileID: 1028821386}
 --- !u!1 &1185455109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,8 +4753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContainerPosition>k__BackingField: 0
+  <ContainerRect>k__BackingField: {fileID: 1546850035}
   maxPopups: 8
-  ContainerRect: {fileID: 1546850035}
 --- !u!1 &1592381901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,8 +4892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContainerPosition>k__BackingField: 2
+  <ContainerRect>k__BackingField: {fileID: 1621908025}
   maxPopups: 8
-  ContainerRect: {fileID: 1621908025}
 --- !u!1 &1629598574
 GameObject:
   m_ObjectHideFlags: 0

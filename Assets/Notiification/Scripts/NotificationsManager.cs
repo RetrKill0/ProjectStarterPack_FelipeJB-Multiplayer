@@ -21,7 +21,7 @@ namespace NotificationSystem
             {
                 NotificationCategory notifCategory = NotificationCategories.FirstOrDefault(c => c.Category == category);
 
-                NotificationPopup popup = Instantiate(NotificationPrefab);
+                NotificationPopup popup = Instantiate(NotificationPrefab, container.ContainerRect);
                 popup.TitleText.text = title;
                 popup.ContentText.text = content;
                 popup.Icon.sprite = notifCategory.Icon;
