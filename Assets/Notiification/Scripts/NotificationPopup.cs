@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 namespace NotificationSystem
 {
+    [RequireComponent(typeof(RectTransform))]
     public class NotificationPopup : MonoBehaviour
     {
         [field: SerializeField] public Image TimeFill { get; private set; }
@@ -31,14 +32,14 @@ namespace NotificationSystem
                 timeLeft -= Time.deltaTime;
                 TimeFill.fillAmount = timeLeft / ShowTime;
                 if (timeLeft <= 0)
-                    Destroy();
+                    DestroyPopup();
             }
         }
 
-        void Destroy()
+        public void DestroyPopup(bool notifyContainer = true)
         {
             active = false;
-            if(container != null)
+            if(container != null && notifyContainer)
                 container.RemoveNotification(this);
             Destroy(gameObject);
         }
