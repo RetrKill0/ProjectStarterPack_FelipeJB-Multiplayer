@@ -687,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: 345
-  m_MinHeight: 82
+  m_MinHeight: 85
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
@@ -745,10 +745,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbec0b8e5d9b7004a977b939c27b5e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFill: {fileID: 4200238701675582805}
-  Icon: {fileID: 6291051772590195497}
-  TitleText: {fileID: 3126230870284450035}
-  ContentText: {fileID: 7942532499541898985}
+  <TimeFill>k__BackingField: {fileID: 4200238701675582805}
+  <Icon>k__BackingField: {fileID: 6291051772590195497}
+  <TitleText>k__BackingField: {fileID: 3126230870284450035}
+  <ContentText>k__BackingField: {fileID: 7942532499541898985}
+  <container>k__BackingField: {fileID: 0}
+  ShowTime: 5
 --- !u!1 &7931435940735096519
 GameObject:
   m_ObjectHideFlags: 0

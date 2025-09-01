@@ -6,19 +6,41 @@ namespace NotificationSystem
 {
     public class NotificationPopup : MonoBehaviour
     {
-        [SerializeField] Image TimeFill;
-        [SerializeField] Image Icon;
-        [SerializeField] TextMeshProUGUI TitleText;
-        [SerializeField] TextMeshProUGUI ContentText;
+        [field: SerializeField] public Image TimeFill { get; private set; }
+        [field: SerializeField] public Image Icon { get; private set; }
+        [field: SerializeField] public TextMeshProUGUI TitleText { get; private set; }
+        [field: SerializeField] public TextMeshProUGUI ContentText { get; private set; }
+        [field: SerializeField] public NotificationContainer container { get; set; }
+
+        public float ShowTime = 5;
+
+        private float timeLeft = 5;
+        private bool active = false;
 
         void Start()
         {
-
+            active = true;
+            TimeFill.fillAmount = 1f;
+            timeLeft = ShowTime; 
         }
 
         void Update()
         {
+            if(active)
+            {
+                timeLeft -= Time.deltaTime;
+                TimeFill.fillAmount = timeLeft / ShowTime;
+                if (timeLeft <= 0)
+                    Destroy();
+            }
+        }
 
+        void Destroy()
+        {
+            active = false;
+            if(container != null)
+                container.RemoveNotification(this);
+            Destroy(gameObject);
         }
     }
 }
