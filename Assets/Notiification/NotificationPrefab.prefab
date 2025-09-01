@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Left: 15
     m_Right: 20
     m_Top: 25
-    m_Bottom: 17
+    m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 17
   m_ChildForceExpandWidth: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 17
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
