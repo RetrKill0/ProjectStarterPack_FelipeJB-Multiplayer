@@ -14,7 +14,7 @@ namespace NotificationSystem
 
         private List<NotificationPopup> activePopups = new List<NotificationPopup>();
 
-        private void Start()
+        private void OnEnable()
         {
             Clear();
         }
